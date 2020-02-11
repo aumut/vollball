@@ -1,0 +1,67 @@
+.carousel-indicators
+	li
+		+border-radius(50%)
+		width: 20px
+		height: 20px
+		margin-left: 10px
+		margin-right: 10px
+		+tablet
+			width: 10px
+			height: 10px
+
+.carousel-item
+	position: relative
+
+.carousel-text
+	bottom: 35%
+	text-align: left
+	&__title
+		font-family: 'OpenSans SemiBold', Arial, sans-serif
+		font-size: $fs_carousel_title
+		letter-spacing: 6px
+		line-height: 1
+		text-transform: uppercase
+		color: #FFFFFF
+		+large
+			font-size: $fs_carousel_title_lg
+		+medium
+			font-size: $fs_carousel_title_md
+		+tablet
+			font-size: $fs_carousel_title_tb
+		+phone
+			font-size: $fs_carousel_title_ph
+	.logo
+		font-size: $fs_carousel_logo
+		color: $col_acsent
+		letter-spacing: 3px
+		+large
+			font-size: $fs_carousel_logo_lg
+		+medium
+			font-size: $fs_carousel_logo_md
+		+tablet
+			font-size: $fs_carousel_logo_tb
+		+phone
+			font-size: $fs_carousel_logo_ph
+	&__descr
+		font-family: $ff_carousel_text
+		line-height: 2
+		text-transform: uppercase
+		font-size: $fs_carousel_text
+		background-color: rgba(0, 0, 0, 0.5)
+		padding: $pd_carousel_text	
+		+large
+			font-size: $fs_carousel_text_lg
+		+medium
+			font-size: $fs_carousel_text_md
+		+tablet
+			font-size: $fs_carousel_text_tb
+		+phone
+			font-size: $fs_carousel_text_ph
+
+
+.carousel-img
+	opacity: 0.85
+	max-height: 700px	
+	min-height: 250px
+	object-fit: cover
+	background-color: $col_slider_bg

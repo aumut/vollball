@@ -1,0 +1,74 @@
+.header
+	position: fixed
+	top: 0px
+	left: 0px
+	width: 100%
+	z-index: 1
+	&--transp
+		background-color: rgba(0, 0, 0, 0.7)
+	&__inner
+		+flexbox  
+		+justify-content(flex-start)	
+		padding: 2.1rem 0px
+		+align-items(center)
+		+tablet
+			padding: 1rem 0px
+	&__logo
+		margin-left: 1.4rem
+		+tablet
+			margin-left: 1rem
+	&__nav		
+		margin-left: 2.1rem
+		+tablet
+			margin-left: 0.5rem
+	&__login
+		margin-left: auto
+
+
+.menu-nav
+	list-style: none
+	+flexbox
+	&__li
+		margin-left: 2.1em
+		font-family: $ff_nav
+		line-height: 3
+		text-transform: uppercase
+		border-bottom: 2px solid transparent
+		font-size: $fs_nav
+		+large
+			font-size: $fs_nav_large
+		a
+			color: $col_font_main
+			&:hover
+				text-decoration: none
+		&:hover, &:active
+			border-bottom-color: $col_acsent		
+
+
+.footer
+	background-color: rgba(0, 0, 0, 0.7)
+	&__inner
+		+flexbox
+		+justify-content(space-between)
+		+align-items(center)
+		padding: 2.1rem 0px
+	&__copyright
+		font-size: $fs_footer
+	&-contacts	
+		font-size: $fs_footer
+		+flexbox
+		&__li
+			margin-right: 5px
+			&:last-child
+				margin-right: 0px
+
+.social-menu
+	+flexbox
+	&__li
+		margin-right: 5px
+		&:last-child
+			margin-right: 0px		
+	&__fb
+		width: 50px
+		height: 50px
+		background: transparent url("../images/ic/ic-fb.svg") no-repeat

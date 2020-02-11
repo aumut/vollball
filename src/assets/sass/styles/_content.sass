@@ -1,0 +1,74 @@
+.article-list
+	+flexbox
+	+align-items(center)
+	+tablet
+		+flex-direction(column)
+	&__img
+		width: 300px
+		margin-right: 2rem
+		margin-bottom: 0
+		img 
+			width: 100%
+			height: auto
+		+tablet
+			width: 100%		
+			margin-right: 0	
+			margin-bottom: 0.5rem
+	&__title
+		font-size: $fs_h3
+		letter-spacing: 2px	
+		font-family: $ff_blog_title	
+		font-weight: bold
+		color: $col_title
+		line-height: 1.3
+		&:hover
+			color: $col_title
+			opacity: 0.9
+	&__subtitle
+		font-size: $fs_h4	
+		line-height: 1.3
+		color: inherit	
+		&:hover
+			color: inherit	
+	&__details
+		line-height: 2
+		color: $col_acsent
+		margin-bottom: 0
+		+tablet
+			margin-bottom: 0.5rem
+
+.page
+	&__title
+		font-size: $fs_h2
+		letter-spacing: 3px
+		line-height: 2
+		font-family: $ff_blog_title
+		font-weight: bold
+		color: $col_title
+		padding: 1.3rem 0
+		text-transform: uppercase
+		text-align: center			
+
+	table
+		color: inherit	
+	th	
+		font-family: $ff_blog_title
+		color: $col_title
+		text-transform: uppercase
+	.table-bordered thead td, .table-bordered thead th		
+		border-bottom-width: 1px
+
+.payment
+	thead
+		th:first-child
+			color: inherit
+	tbody 
+		td:first-child
+			font-family: $ff_blog_title
+			color: $col_title
+		td
+			max-width: 250px
+
+	h4
+		color: $col_acsent
+		text-align: right			

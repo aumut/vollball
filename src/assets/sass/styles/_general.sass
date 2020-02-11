@@ -1,0 +1,84 @@
+*
+  &:focus, &:active
+    outline: none !important
+html
+  overflow: hidden
+
+body
+  font:
+    family: $ff_body
+    size: $fs_body
+    weight: $fw_body
+  color: $col_font_main
+  line-height: 1
+  min-width: $w_minBody
+  margin: 0
+  padding: 0
+  height: $h_body
+  background: $col_bg
+  overflow-y: scroll
+
+h2
+  font-size: $fs_h2
+h3
+  font-size: $fs_h3
+h4
+  font-size: $fs_h4
+
+
+a
+  color: inherit
+  &:hover
+    text-decoration: unset
+    color: inherit
+
+.container
+  //background: $col_bg
+  //background: black
+
+
+.logo
+  display: inline-block
+  font-size: $fs_logo
+  color: $col_font_main
+  font-family: "Bringin"
+  text-align: center
+  cursor: pointer
+  &__firstLetter
+    color: $col_acsent
+
+.btn
+  font-family: $ff_btn
+  font-size: $fs_btn
+  letter-spacing: 2px
+  line-height: 2
+  text-align: center
+  padding: 7px 2.8rem 6px
+  background-color: $col_acsent
+  color: $col_font_btn
+  text-transform: uppercase
+  +border-radius($rad_btn)
+  cursor: pointer  
+  +tablet
+    padding: 5px 1.8rem
+  +phone
+    padding: 5px 1.2rem
+  &:hover
+    color: $col_font_btn      
+  &--transp
+    background-color: transparent
+    border: $borderW_btn solid $col_acsent
+    color: $col_acsent
+    &:hover
+      color: $col_acsent   
+
+.form-control
+  +border-radius($rad_form_contr)      
+
+.link
+  color: $col_acsent
+  font-size: $fs_btn
+  cursor: pointer
+  &:hover
+    color: $col_acsent
+    text-decoration: underline

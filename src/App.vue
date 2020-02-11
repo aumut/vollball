@@ -6,7 +6,11 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+  import 'bootstrap';
+  import 'bootstrap/dist/css/bootstrap.min.css';
+  import './assets/sass/style.sass';
+  import HelloWorld from './components/HelloWorld.vue';
+
 
 export default {
   name: 'App',
