@@ -1,16 +1,16 @@
 <template>
     <div>
-        <table class="table table-bordered">
+        <table class="table table-bordered time-table">
             <thead>
             <tr>
-                <th v-for="col in col_list" v-bind:key="col.index">{{ col.col_text }}</th>
+                <th>{{th_first}}</th>
+                <th v-for="th in th_list" v-bind:key="th.index">{{ th.th_text }}</th>
             </tr>
             </thead>
             <tbody>
-            <tr v-for="row in rows_list" v-bind:key="row.index">
-                <td v-for="col in columns"  v-bind:key="col.index">{{ columns }}</td>
-                <!--<td v-for="td in td_list" v-bind:key="td.index">{{ td.date }}</td>-->
-                <!--<td v-for="col in columns" v-bind:key="col.index">{{ row[col] }} </td>-->
+            <tr v-for="tr in tr_list" v-bind:key="tr.index">
+                <td>{{ tr.time }}</td>
+                <td v-for="th in th_list" v-bind:key="th.index" >ddf</td>
             </tr>
             </tbody>
         </table>
@@ -21,74 +21,21 @@
         name: 'ContentTimeTable',
         data() {
             return {
-                col_list: [
-                    {
-                        index: 1,
-                        col_text: 'Пн'
-                    },
-                    {
-                        index: 2,
-                        col_text: 'Вт'
-                    },
-                    {
-                        index: 3,
-                        col_text: 'Ср'
-                    },
-                    {
-                        index: 4,
-                        col_text: 'Чт'
-                    },
-                    {
-                        index: 5,
-                        col_text: 'Пт'
-                    },
-                    {
-                        index: 6,
-                        col_text: 'Сб'
-                    },
-                    {
-                        index: 7,
-                        col_text: 'Вс'
-                    }
+                th_first: 'Время/День',
+                th_list: [
+                    { index: 1, th_text: 'Пн'},
+                    { index: 2, th_text: 'Вт'},
+                    { index: 3, th_text: 'Ср'},
+                    { index: 4, th_text: 'Чт'},
+                    { index: 5, th_text: 'Пт'},
+                    { index: 6, th_text: 'Сб'},
+                    { index: 7, th_text: 'Вс'}
                 ],
-                rows_list: [
-                    {
-                        index: 1,
-                        row_text: '1122'
-                    },
-                    {
-                        index: 2,
-                        row_text: '444'
-                    },
-                    {
-                        index: 3,
-                        row_text: '444'
-                    },
-                    {
-                        index: 4,
-                        row_text: '444'
-                    },
-                    {
-                        index: 5,
-                        row_text: '444'
-                    },
-                    {
-                        index: 6,
-                        row_text: '444'
-                    },
-                    {
-                        index: 7,
-                        row_text: '444'
-                    }
+                tr_list: [
+                    { index: 1, time: '16:00'},
+                    { index: 2, time: '18:00'},
+                    { index: 3, time: '20:00'}
                 ]
-            }
-        },
-        computed: {
-            "columns": function columns() {
-                if (this.col_list.length == 0) {
-                    return [];
-                }
-                return Object.keys(this.col_list[0])
             }
         }
     }
