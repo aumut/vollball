@@ -1,12 +1,7 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <HeaderSlider></HeaderSlider>
-    <content>
-      <div class="container">
-        <Content></Content>
-      </div>
-    </content>
+    <img alt="Vue logo" src="./assets/logo.png">
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
 
@@ -14,15 +9,24 @@
   import 'bootstrap';
   import 'bootstrap/dist/css/bootstrap.min.css';
   import './assets/sass/style.sass';
-  import Header from './components/Header.vue';
-  import HeaderSlider from './components/HeaderSlider.vue';
-  import Content from './components/Content.vue';
+  import HelloWorld from './components/HelloWorld.vue';
 
 
 export default {
   name: 'App',
   components: {
-    Header, HeaderSlider, Content
+    HelloWorld
   }
 }
 </script>
+
+<style>
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
+</style>
