@@ -15,11 +15,15 @@
     import ContentTimeTable from './ContentTimeTable.vue';
     // here Ivan Calendaar
     import IvanCal from './CalendarWrap';
+    import ContentPayment from './ContentPayment.vue';
+    import ContentGallery from './ContentGallery.vue';
+    import ContentContacts from "./ContentContacts";
+    
     export default {
         name: 'Content',
         components: {
             // here Ivan Calendaar
-            ContentNews, ContentTimeTable, IvanCal
+            ContentNews, ContentTimeTable, IvanCal, ContentPayment, ContentGallery, ContentContacts
         },
         data(){
             return {
@@ -33,6 +37,21 @@
                         index: 2,
                         title: 'Расписание',
                         section: ContentTimeTable
+                    },
+                    {
+                        index: 3,
+                        title: 'Оплата',
+                        section: ContentPayment
+                    },
+                    {
+                        index: 4,
+                        title: 'Галерея',
+                        section: ContentGallery
+                    },
+                    {
+                        index: 5,
+                        title: 'Контакты',
+                        section: ContentContacts
                     }
                 ]
             }

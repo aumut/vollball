@@ -7,6 +7,9 @@
         <Content></Content>
       </div>
     </content>
+    <footer class="footer">
+      <Footer></Footer>
+    </footer>
   </div>
 </template>
 
@@ -17,12 +20,13 @@
   import Header from './components/Header.vue';
   import HeaderSlider from './components/HeaderSlider.vue';
   import Content from './components/Content.vue';
+  import Footer from './components/Footer.vue';
 
 
 export default {
   name: 'App',
   components: {
-    Header, HeaderSlider, Content
+    Header, HeaderSlider, Content, Footer
   }
 }
 </script>
