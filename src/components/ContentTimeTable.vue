@@ -21,6 +21,8 @@
         name: 'ContentTimeTable',
         data() {
             return {
+
+
                 isActive: true,
                 th_first: 'Время / День',
                 th_list: [
