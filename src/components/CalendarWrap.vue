@@ -1,6 +1,8 @@
 <template>
     <div>
-        <cal-rend/>
+        <button @click="prevMonth">previous mon</button>
+        <cal-rend :month="month" :year="year" :events="events"/>
+        <button @click="nextMonth">next mon</button>
     </div>
 </template>
 
@@ -15,7 +17,16 @@ export default {
         events: []
     }},
     methods: {
-
+        // меняем месяц на предыдущий
+        prevMonth() {
+            if (this.month <= 0) {
+                this.month = 11;
+                this.year--;
+            } else this.month--;
+        },
+        nextMonth() {
+            alert('not implemented yet!');
+        }
     }
 }
 </script>

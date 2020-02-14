@@ -3,6 +3,7 @@
         <th>
             <td>{{ month + "/" + year }}</td>
         </th>
+            <!-- и рисуем всё из event -->
     </table>
 </template>
 

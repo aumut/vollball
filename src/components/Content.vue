@@ -6,15 +6,20 @@
                 <component :is="page.section"></component>
             </div>
         </div>
+        <!-- here Ivan Calendaar -->
+        <ivan-cal/>
     </content>
 </template>
 <script>
     import ContentNews from './ContentNews.vue';
     import ContentTimeTable from './ContentTimeTable.vue';
+    // here Ivan Calendaar
+    import IvanCal from './CalendarWrap';
     export default {
         name: 'Content',
         components: {
-            ContentNews, ContentTimeTable
+            // here Ivan Calendaar
+            ContentNews, ContentTimeTable, IvanCal
         },
         data(){
             return {
