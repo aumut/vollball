@@ -11,10 +11,13 @@
 <script>
     import ContentNews from './ContentNews.vue';
     import ContentTimeTable from './ContentTimeTable.vue';
+    import ContentPayment from './ContentPayment.vue';
+    import ContentGallery from './ContentGallery.vue';
+    import ContentContacts from "./ContentContacts";
     export default {
         name: 'Content',
         components: {
-            ContentNews, ContentTimeTable
+            ContentNews, ContentTimeTable, ContentPayment, ContentGallery, ContentContacts
         },
         data(){
             return {
@@ -28,6 +31,21 @@
                         index: 2,
                         title: 'Расписание',
                         section: ContentTimeTable
+                    },
+                    {
+                        index: 3,
+                        title: 'Оплата',
+                        section: ContentPayment
+                    },
+                    {
+                        index: 4,
+                        title: 'Галерея',
+                        section: ContentGallery
+                    },
+                    {
+                        index: 5,
+                        title: 'Контакты',
+                        section: ContentContacts
                     }
                 ]
             }

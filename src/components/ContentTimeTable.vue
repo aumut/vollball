@@ -10,7 +10,7 @@
             <tbody>
             <tr v-for="tr in tr_list" v-bind:key="tr.index">
                 <td>{{ tr.time }}</td>
-                <td v-for="th in th_list" v-bind:key="th.index" >ddf</td>
+                <td v-for="th in th_list" v-bind:key="th.index">X</td>
             </tr>
             </tbody>
         </table>
@@ -21,7 +21,8 @@
         name: 'ContentTimeTable',
         data() {
             return {
-                th_first: 'Время/День',
+                isActive: true,
+                th_first: 'Время / День',
                 th_list: [
                     { index: 1, th_text: 'Пн'},
                     { index: 2, th_text: 'Вт'},
