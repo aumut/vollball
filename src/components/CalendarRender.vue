@@ -1,7 +1,7 @@
 <template>
     <table>
         <th>
-            <td>{{ month + "/" + year }}</td>
+            <td @click="clickOnDay">{{ month + "/" + year }}</td>
         </th>
             <!-- и рисуем всё из event -->
     </table>
@@ -19,7 +19,10 @@ export default {
         
     }},
     methods: {
-
+        clickOnDay() {
+            alert('clickOnDay');
+            this.$emit('clickOnDay', 'myMeSSAGE');
+        }
     }
 }
 </script>

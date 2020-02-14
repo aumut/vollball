@@ -1,7 +1,8 @@
 <template>
     <div>
         <button @click="prevMonth">previous mon</button>
-        <cal-rend :month="month" :year="year" :events="events"/>
+        <cal-rend :month="month" :year="year" :events="events" 
+            v-on:clickOnDay="clickOnDayMethod"/>
         <button @click="nextMonth">next mon</button>
     </div>
 </template>
@@ -26,6 +27,9 @@ export default {
         },
         nextMonth() {
             alert('not implemented yet!');
+        },
+        clickOnDayMethod(message) {
+            alert('clickOnDayMethod: ' + message);
         }
     }
 }
