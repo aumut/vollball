@@ -1,13 +1,13 @@
 <template>
     <content>
+        <!-- here Ivan Calendaar -->
+        <ivan-cal/>
         <div class="page" v-for="page in page_list" v-bind:key="page.index">
             <h2 class="page__title">{{ page.title }}</h2>
             <div class="page__inner">
                 <component :is="page.section"></component>
             </div>
         </div>
-        <!-- here Ivan Calendaar -->
-        <ivan-cal/>
     </content>
 </template>
 <script>

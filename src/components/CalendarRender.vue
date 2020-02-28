@@ -1,10 +1,17 @@
 <template>
     <table>
-        <th>
-            <td @click="clickOnDay">{{ month + "/" + year }}</td>
+    <thead>
+        <th colspan="7">
+            <td>{{ monthName + " / " + year }}</td>
         </th>
-            <!-- и рисуем всё из event -->
-            <tr />
+    </thead>
+    <tbody>
+        <!-- и рисуем всё из weeks -->
+        <tr v-for="week in weeks" :key="week.pos">
+            <td v-for="day in week.week" :key="day.pos" style="padding-left: 5px"
+                 @click="clickOnDay(day.day)">{{ day.day }}</td>
+        </tr>
+    </tbody>
     </table>
 </template>
 
@@ -12,51 +19,24 @@
 export default {
     name: 'CalendarRender',
     props: {
+        // номер месяца, 0-11
         'month': Number,
+        // месяц текстом
+        'monthName': String,
+        // год
         'year': Number,
-        'events': Array,
-        'mon': Array
+        // наши недели
+        'weeks': Array
     },
-    data: function() { return {
-        ourMonth: []
-    }},
     methods: {
-        init() {
-            this.createMonth();
-        },
-        createMonth() {
-            // тут создаем массив на месяц
-            let dstr = (this.month < 10 ? "0" : "")
-                + (1 + this.month).toString() + "/01" + "/" + this.year.toString();
-            let begin = new Date(dstr);
-            let firstDayOfMon = begin.getDay();
-            alert(dstr + " " + firstDayOfMon);
-            alert(this.mon);
-
-            if (firstDayOfMon === '1') { // 1=mond
-                this.createWeek(firstDayOfMon);
-            } else { console.log("not ready"); }
-            for(let i = firstDayOfMon + 7; i < this.mon; i++) {
-                ;
-            }
-            alert(this.ourMonth);
-        },
-        createWeek(startDay) {
-            // тут делаем неделю
-            let thr = startDay + 7;
-            let week = [];
-            for (let i = startDay; i < thr; i++) {
-                week.push( {day: i} );
-            }
-            this.ourMonth.push(week);
-        },
-        clickOnDay() {
-            alert('clickOnDay');
-            this.$emit('clickOnDay', 'myMeSSAGE');
+        // событие на клик по числу в календаре
+        clickOnDay(day) {
+            // передаем информацию (число, по кот. кликнули) в родительский компонент
+            this.$emit('clickOnDay', day);
         }
     },
     mounted() {
-        this.init();
+        // console.log(this.year, this.month);
     }
 }
 </script>
